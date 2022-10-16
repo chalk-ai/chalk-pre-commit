@@ -1,0 +1,5 @@
+- id: chalk-lint
+  name: Chalk Lint
+  description: This hook runs 'chalk lint' and reports errors
+  language: system
+  types: [python]
