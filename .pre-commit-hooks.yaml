@@ -4,3 +4,4 @@
   language: system
   types: [python]
   entry: chalk lint
+  pass_filenames: false
