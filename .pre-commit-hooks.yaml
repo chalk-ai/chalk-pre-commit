@@ -3,3 +3,4 @@
   description: This hook runs 'chalk lint' and reports errors
   language: system
   types: [python]
+  entry: chalk lint
