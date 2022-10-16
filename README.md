@@ -4,7 +4,7 @@ This repository provides configuration which makes it easy to use [chalk's linte
 
 ## Usage
 
-In the root of your repository, create a `.pre-commit-config.yaml` file contianing:
+In the root of your repository, create a `.pre-commit-config.yaml` file containing:
 
 ```
 - repo: https://github.com/chalk-ai/chalk-pre-commit
