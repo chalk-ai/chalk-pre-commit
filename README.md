@@ -18,3 +18,28 @@ If you already have a .pre-commit-config.yaml file, just add this alongside othe
 
 
 Then, run: `pre-commit install` to initialize your pre-commit setup. From now on, when you run `git commit`, `chalk lint` will execute.
+
+
+## Usage with GitHub Action
+
+This `chalk-pre-commit` plugin assumes that you have `chalk` and `chalkpy` available on your `PATH`.
+
+In GitHub Actions, you can ensure this by first installing your `pip` requirements, and then using either chalk-ai/cli-action or chalk-ai/deploy-action:
+
+```
+steps:
+- uses: actions/setup-python@v4
+  with:
+    python-version: '3.10'
+    cache: 'pip'
+
+- name: "Install dependencies"
+  run: pip install -r requirements.txt
+
+- uses: chalk-ai/cli-action@v1
+  with:
+    client-id: ...
+    client-secret: ...
+
+- uses: pre-commit/action@v3.0.0
+```
